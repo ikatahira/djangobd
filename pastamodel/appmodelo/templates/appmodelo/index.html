@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
@@ -7,13 +7,13 @@
 </head>
 <body>
     <ul>
-        {% for item i lista_itens %}
+        {% for item in lista_itens %}
             <li>
             {{item.id}}:{{item.titulo}}-{{item.texto}}-{{item.data|date:'d/m/Y'}}-{{item.hora}}
             </li>
         {%empty%}
             <li> Sem comentários na lista</li>
-        {%endfor%}
+        {% endfor %}
     </ul>
 </body>
 </html>
